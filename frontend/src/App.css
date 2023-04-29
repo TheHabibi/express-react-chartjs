@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  background-color: #ffffff;
+}
+.Vendor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Centers the content vertically */
+  align-items: center;
+  /* Centers the content horizontally */
+  height: 100vh;
+  /* Sets the height of the container to the full viewport height */
+}
+.Vendor select {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.Vendor select:focus {
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgba(30, 136, 229, 0.5);
+}
+
+.Vendor select option {
+  font-size: 16px;
+}
+.App-link {
+  color: #61dafb;
+}
+
+.sales-table {
+  margin: auto;
+  text-align: center;
+}
+
+thead {
+  background-color: #ccc;
+}
+
+tbody {
+  background-color: #fff;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
