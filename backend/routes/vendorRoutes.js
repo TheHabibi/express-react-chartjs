@@ -1,8 +1,7 @@
 const express = require("express");
-const {allVendors} = require("../controllers/vendorControllers");
-
+const { allVendors } = require("../controllers/vendorControllers");
 
 const router = express.Router();
 
-router.get('/allVendors', allVendors)
+router.get("/allVendors", allVendors);
 module.exports = router;

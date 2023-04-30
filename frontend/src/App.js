@@ -17,8 +17,8 @@ function App() {
         darker: "#ffb74d",
       },
       neutral: {
-        main: "#f44336",
-        contrastText: "#e3f2fd",
+        main: "#e3f2fd",
+        contrastText: "#fffff",
       },
     },
   });

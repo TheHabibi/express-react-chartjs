@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 function Sale() {
   const [sales, setSales] = useState([]);
   const [vendorId, setVendorId] = useState("");
+  const [vendorName, setVendorName] = useState("");
   const [sortField, setSortField] = useState("name");
   const [sortDirection, setSortDirection] = useState("asc"); 
   const location = useLocation();
@@ -22,6 +23,7 @@ function Sale() {
       saleService.totalSales(vendorId).then(
         (response) => {
           setSales(response.saleList);
+          setVendorName(response.vendorName)
         },
         (error) => {
           console.log(error);
@@ -62,21 +64,25 @@ const navigateMonthlySales = (selectedVendorId) => {
   return (
     <div className="Sale">
       {console.log(sales)}
-      <h1 style={{ fontFamily: "RomanSerif" }} >ALL TIME SALES</h1>
-      <p>Vendor ID: {vendorId}</p>
+      <h1 style={{ fontFamily: "RomanSerif" }}>TOTAL UNIT SALES</h1>
+      <p>
+        <strong>Vendor Name:</strong> {vendorName}
+      </p>
       <Button
         onClick={() => navigateTotalSales(vendorId)}
         variant="contained"
         color="neutral"
+        style={{ margin: "30px", padding: "7px 20px" }}
       >
-        TOTAL SALES
+        TOTAL UNIT SALES
       </Button>
       <Button
         onClick={() => navigateMonthlySales(vendorId)}
         variant="contained"
         color="neutral"
+        style={{ margin: "30px", padding: "7px 20px" }}
       >
-        Monthly Sales
+        Monthly Revenue
       </Button>
       <table style={{ margin: "0 auto" }}>
         <thead>

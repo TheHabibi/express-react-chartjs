@@ -2,15 +2,36 @@
   text-align: center;
   background-color: #ffffff;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Sale {
+  margin: 20px;
+  padding: 20px;
+}
+
+h1 {
+  margin: 10px 0;
+  padding: 0;
+}
+
+Button {
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+canvas {
+  margin-top: 20px;
+}
 .Vendor {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* Centers the content vertically */
   align-items: center;
-  /* Centers the content horizontally */
   height: 100vh;
-  /* Sets the height of the container to the full viewport height */
 }
 .Vendor select {
   font-size: 16px;

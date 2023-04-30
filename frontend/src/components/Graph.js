@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 function Sale() {
   const [sales, setSales] = useState([]);
   const [vendorId, setVendorId] = useState("");
+  const [vendorName, setVendorName] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -21,6 +22,7 @@ function Sale() {
       saleService.monthlySales(vendorId).then(
         (response) => {
           setSales(response.monthlySales);
+           setVendorName(response.vendorName);
         },
         (error) => {
           console.log(error);
@@ -92,14 +94,27 @@ function Sale() {
 
   return (
     <div className="Sale">
-      <h1>Monthly Sales from LONCA</h1>
-      <button onClick={() => navigateTotalSales(vendorId)}>
-        ALL TIME SALES
-      </button>
-      <button onClick={() => navigateMonthlySales(vendorId)}>
-        MONTHLY SALES
-      </button>
-      <div style={{ width: "1000px", margin: "0 auto" }} >
+      <h1 style={{ fontFamily: "RomanSerif" }}>MONTHLY REVENUE GRAPH</h1>
+      <p>
+        <strong>Vendor Name:</strong> {vendorName}
+      </p>
+      <Button
+        onClick={() => navigateTotalSales(vendorId)}
+        variant="contained"
+        color="neutral"
+        style={{ margin: "30px", padding: "7px 20px" }}
+      >
+        TOTAL UNIT SALES
+      </Button>
+      <Button
+        onClick={() => navigateMonthlySales(vendorId)}
+        variant="contained"
+        color="neutral"
+        style={{ margin: "30px", padding: "7px 20px" }}
+      >
+        MONTHLY REVENUE
+      </Button>
+      <div style={{ width: "1000px", margin: "0 auto" }}>
         <canvas ref={chartRef}></canvas>
       </div>
     </div>
