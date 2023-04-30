@@ -36,7 +36,6 @@ const totalSales = asyncHandler(async (req, res) => {
         }, 0)
       );
     }, 0);
-    console.log(`${name} Sale Number: ${saleCount}`);
     return { name, totalSale: saleCount };
   });
 
