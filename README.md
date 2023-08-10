@@ -1,4 +1,4 @@
-# LONCA Case Study
+# Graph Application using an Express Server and Chart.js
 ## Used Technologies
 - Node.js
 - Express.js
@@ -14,10 +14,6 @@
 - "npm install"
 - "npm start"
 - Open http://localhost:3000/ on your browser
-
-## Deployment
-- You can acces the deployed project from https://lonca-case-study.onrender.com 
-- Note: Since I'm using a free hosting service, the server is relatively slow
 
 ## Screenshots
 
